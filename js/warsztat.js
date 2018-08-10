@@ -7,19 +7,18 @@ $(function () {
 
         books.forEach(function (book) {
             var title = $("<div>" + book.title + "</div>");
+            var id = book.id;
             booksElement.append(title);
 
             var bookDetails = $("<div>");
 
             title.after(bookDetails);
-            bookDetails.text("tu wstawimy szczegóły dotyczące naszej ksiązki");
+            bookDetails.text("Id " + id);
             bookDetails.addClass("hidden");
 
             title.click(function () {
                 bookDetails.toggle("hidden");
             });
-
-
 
 
 
